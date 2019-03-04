@@ -56,6 +56,9 @@ public class Inventory {
      * @return - return the number of items
      */
     public Integer getItemQuantity(String item) {
+        if(!inventoryList.containsKey(item)){
+            inventoryList.put(item,0);
+        }
         return inventoryList.get(item);
     }
 }
