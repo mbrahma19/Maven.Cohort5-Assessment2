@@ -12,11 +12,11 @@ public class Animal {
     private Person owner;
 
     public Animal() {
-        this(null,new Person());
+        this(null, new Person());
     }
 
     /**
-     * @param id - id of animal
+     * @param id    - id of animal
      * @param owner - owner of animal
      */
     public Animal(Long id, Person owner) {

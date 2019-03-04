@@ -28,24 +28,24 @@ public class BasicStringUtils {
     }
 
     /**
-     * @param string - the string to be manipulated
+     * @param string             - the string to be manipulated
      * @param charactersToRemove - Characters that should be removed from `string`
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
         char[] charArray = charactersToRemove.toCharArray();
-        for(char c : charArray){
+        for (char c : charArray) {
             string = string.replace(Character.toString(c), "");
         }
         return string;
     }
 
     /**
-     * @param string - the string to be manipulated
+     * @param string             - the string to be manipulated
      * @param charactersToRemove - characters to be removed from the string
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return reverse(removeCharacters(string,charactersToRemove));
+        return reverse(removeCharacters(string, charactersToRemove));
     }
 }

@@ -8,15 +8,15 @@ import java.util.TreeMap;
  */
 public class Inventory {
 
-    private TreeMap<String,Integer> inventoryList;
+    private TreeMap<String, Integer> inventoryList;
     //private List<String> listOfItems;
+
     /**
      * @param strings list of strings to add / remove / fetch from
      */
     public Inventory(List<String> strings) {
         inventoryList = new TreeMap<>();
         initializaInventory(strings);
-        //listOfItems = strings;
     }
 
     /**
@@ -27,19 +27,19 @@ public class Inventory {
         //listOfItems = new ArrayList<>(0);
     }
 
-    private void initializaInventory(List<String> list){
-       for(String s : list){
-           inventoryList.put(s,0);
-       }
+    private void initializaInventory(List<String> list) {
+        for (String s : list) {
+            inventoryList.put(s, 0);
+        }
     }
 
     /**
      * @param item - increment the number of this item in stock by 1
      */
     public void addItemToInventory(String item) {
-        if(inventoryList.get(item) == null){
-            inventoryList.put(item,1);
-        }else {
+        if (inventoryList.get(item) == null) {
+            inventoryList.put(item, 1);
+        } else {
             inventoryList.put(item, inventoryList.get(item) + 1);
         }
     }
@@ -48,7 +48,7 @@ public class Inventory {
      * @param item - decrement the number of this item in stock by 1
      */
     public void removeItemFromInventory(String item) {
-        inventoryList.put(item, inventoryList.get(item)-1);
+        inventoryList.put(item, inventoryList.get(item) - 1);
     }
 
     /**
@@ -56,8 +56,8 @@ public class Inventory {
      * @return - return the number of items
      */
     public Integer getItemQuantity(String item) {
-        if(!inventoryList.containsKey(item)){
-            inventoryList.put(item,0);
+        if (!inventoryList.containsKey(item)) {
+            inventoryList.put(item, 0);
         }
         return inventoryList.get(item);
     }

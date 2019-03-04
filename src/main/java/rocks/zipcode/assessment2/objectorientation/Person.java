@@ -11,8 +11,8 @@ public class Person {
     private Address address;
 
     /**
-     * @param id - id of person
-     * @param name - name of person
+     * @param id      - id of person
+     * @param name    - name of person
      * @param address - address of person
      */
     public Person(Long id, String name, Address address) {
@@ -50,15 +50,15 @@ public class Person {
     }
 
     @Override
-    public String toString(){
-        return String.format("Person{id=%d, name='%s', address=%s}",id,name,address.toString());
+    public String toString() {
+        return String.format("Person{id=%d, name='%s', address=%s}", id, name, address.toString());
     }
 
     @Override
     public boolean equals(Object o) {
-        if(!(o instanceof Person)){
+        if (!(o instanceof Person)) {
             return false;
-        }else {
+        } else {
             Person personToCompare = (Person) o;
             return idEquals(personToCompare.getId()) &&
                     nameEquals(personToCompare.getName()) &&
@@ -66,26 +66,26 @@ public class Person {
         }
     }
 
-    public boolean idEquals(Long id){
-        if(this.id == null){
+    public boolean idEquals(Long id) {
+        if (this.id == null) {
             return id == null;
-        }else{
+        } else {
             return id.equals(this.id);
         }
     }
 
-    public boolean nameEquals(String name){
-        if(this.name == null){
+    public boolean nameEquals(String name) {
+        if (this.name == null) {
             return name == null;
-        }else{
-         return name.equals(this.name);
+        } else {
+            return name.equals(this.name);
         }
     }
 
-    public boolean addressEquals(Address address){
-        if(this.address == null){
+    public boolean addressEquals(Address address) {
+        if (this.address == null) {
             return address == null;
-        }else{
+        } else {
             return address.equals(this.address);
         }
     }

@@ -8,18 +8,18 @@ import java.util.TreeMap;
  */
 public class MonthConversion {
 
-    private TreeMap<Integer,String> monthList;
+    private TreeMap<Integer, String> monthList;
 
-    public MonthConversion(){
+    public MonthConversion() {
         monthList = new TreeMap<>();
     }
 
     /**
      * @param monthNumber - ordinal of month in the year; i.e. January = 1, February = 2
-     * @param monthName - name of month
+     * @param monthName   - name of month
      */
     public void add(Integer monthNumber, String monthName) {
-        monthList.put(monthNumber,monthName);
+        monthList.put(monthNumber, monthName);
     }
 
     /**
@@ -27,10 +27,9 @@ public class MonthConversion {
      * @return the name of the respective month
      */
     public String getName(Integer monthNumber) {
-        if(!isValidNumber(monthNumber)){
+        if (!isValidNumber(monthNumber)) {
             return null;
-        }
-        else {
+        } else {
             return monthList.get(monthNumber);
         }
     }
@@ -38,13 +37,13 @@ public class MonthConversion {
     /**
      * @param monthName - name of month
      * @return - the ordinal of the month in the year
-     *///TODO get the final test working
-    public int getNumber(String monthName) {
+     */
+    public Integer getNumber(String monthName) {
         Integer numberToreturn = null;
-        if(isValidMonth(monthName)){
-            for(Map.Entry<Integer, String> e : monthList.entrySet()){
-                if(monthName.equals(e.getValue())){
-                    numberToreturn =  e.getKey();
+        if (isValidMonth(monthName)) {
+            for (Map.Entry<Integer, String> e : monthList.entrySet()) {
+                if (monthName.equals(e.getValue())) {
+                    numberToreturn = e.getKey();
                 }
             }
         }
@@ -64,13 +63,7 @@ public class MonthConversion {
      * @return true if the monthName is in the valueSet
      */
     public Boolean isValidMonth(String monthName) {
-        Boolean value = false;
-        for(String s : monthList.values()){
-            if(monthName.endsWith(s)){
-               value = true;
-            }
-        }
-        return value;
+        return monthList.containsValue(monthName);
     }
 
     /**
@@ -82,10 +75,10 @@ public class MonthConversion {
 
     /**
      * @param monthNumber - number of month in year
-     * @param monthName - name of month
+     * @param monthName   - name of month
      */
     public void update(Integer monthNumber, String monthName) {
-        monthList.put(monthNumber,monthName);
+        monthList.put(monthNumber, monthName);
 
     }
 }

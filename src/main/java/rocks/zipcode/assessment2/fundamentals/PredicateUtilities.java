@@ -22,12 +22,11 @@ public class PredicateUtilities {
      * @return true if `value` is a multiple of 3
      */
     public static Boolean isMultipleOf3(Integer value) {
-        return isMultipleOfN(value,3);
+        return isMultipleOfN(value, 3);
     }
 
     /**
-     *
-     * @param value - the value to be evaluated
+     * @param value    - the value to be evaluated
      * @param multiple - the multiple to test `value` against
      * @return true if `value` is a multiple of `multiple`
      */

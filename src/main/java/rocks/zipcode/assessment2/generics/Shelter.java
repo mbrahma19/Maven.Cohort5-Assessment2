@@ -12,7 +12,7 @@ import java.util.function.Consumer;
  * Shelter<Person> farmHouse = new Shelter<Person>();
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
-public class Shelter<Ageable> implements Iterable{
+public class Shelter<Ageable> implements Iterable {
 
     private ArrayList<Ageable> list;
 
