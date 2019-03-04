@@ -49,7 +49,7 @@ public class StringUtils {
 
     /**
      * @param string - string to be evaluated
-     * @return - true if string only contains special characters //TODO get the last test to pass
+     * @return - true if string only contains special characters //
      */
     public static Boolean isSpecialCharacterString(String string) {
         return string.replace(" ", "").matches("[" + "-/@#!*$%?^&.\"'_+={}()"+ "]+");
