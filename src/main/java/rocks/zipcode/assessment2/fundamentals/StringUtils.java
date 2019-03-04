@@ -28,7 +28,7 @@ public class StringUtils {
      * @return the string repeated and concatenated `n` times
      */
     public static String repeatString(String stringToBeRepeated, int numberOfTimeToRepeat) {
-        return null;
+        return new String(new char[numberOfTimeToRepeat]).replace("\0", stringToBeRepeated);
     }
 
     /**
